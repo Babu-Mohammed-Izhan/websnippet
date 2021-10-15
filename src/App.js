@@ -9,7 +9,11 @@ function App() {
     <Container className="App" maxW="xl" centerContent colorScheme="blackAlpha">
       <Navigation />
       <Box>
-        <Codecard />
+        <Codecard
+          language="javascript"
+          code="console.log('Hello');"
+          author="izhan"
+        />
       </Box>
     </Container>
   );

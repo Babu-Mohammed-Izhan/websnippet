@@ -6,6 +6,7 @@ import {
   Text,
   Button,
   useDisclosure,
+  IconButton,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
@@ -30,7 +31,11 @@ const Navigation = () => {
       </Flex>
 
       <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
-        <HamburgerIcon />
+        <IconButton
+          aria-label="Hamburger-icon"
+          icon={<HamburgerIcon />}
+          variant="outline"
+        />
       </Box>
 
       <Stack
