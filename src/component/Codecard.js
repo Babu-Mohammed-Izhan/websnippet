@@ -4,7 +4,13 @@ import { CopyBlock, dracula } from "react-code-blocks";
 
 const Codecard = ({ code, language, author }) => {
   return (
-    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+    <Box
+      maxW="sm"
+      borderWidth="1px"
+      borderRadius="lg"
+      overflow="hidden"
+      bgColor="gray.700"
+    >
       <Box p="6">
         <Box display="flex" alignItems="baseline">
           <Badge borderRadius="full" px="2" colorScheme="yellow">
