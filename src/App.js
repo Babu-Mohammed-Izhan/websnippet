@@ -7,20 +7,18 @@ import "./App.css";
 function App() {
   return (
     <ChakraProvider>
-      <div className="App">
-        <Navigation />
-        <Box bgColor="gray.900" minH="90vh">
-          <SimpleGrid columns={[2, null, 3, 5]} spacing="40px">
-            <Box>
-              <Codecard
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-            </Box>
-          </SimpleGrid>
-        </Box>
-      </div>
+      <Navigation />
+      <Box bgColor="gray.900" minH="100vh">
+        <SimpleGrid columns={[2, null, 3, 5]} spacing="40px">
+          <Box>
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+          </Box>
+        </SimpleGrid>
+      </Box>
     </ChakraProvider>
   );
 }

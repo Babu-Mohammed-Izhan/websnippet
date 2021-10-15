@@ -15,48 +15,49 @@ const Navigation = () => {
   const handleToggle = () => (isOpen ? onClose() : onOpen());
 
   return (
-    <Flex
-      as="nav"
-      align="center"
-      justify="space-between"
-      wrap="wrap"
-      padding={5}
-      bg="purple.600"
-      color="white"
-    >
-      <Flex align="center" ml="10" mr="7">
-        <Heading as="h1" size="lg" letterSpacing={"tight"}>
-          Snip
-        </Heading>
-      </Flex>
-
-      <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
-        <IconButton
-          aria-label="Hamburger-icon"
-          icon={<HamburgerIcon />}
-          variant="outline"
-        />
-      </Box>
-
-      <Box
-        display={{ base: isOpen ? "block" : "none", md: "block" }}
-        mt={{ base: 4, md: 0 }}
-        mr="10"
+    <nav>
+      <Flex
+        align="center"
+        justify="space-between"
+        wrap="wrap"
+        padding={4}
+        bg="purple.600"
+        color="white"
       >
-        <Stack
-          direction={{ base: "column", md: "row" }}
-          display={{ base: isOpen ? "block" : "none", md: "flex" }}
-          width={{ base: "full", md: "auto" }}
-          alignItems="center"
-          flexGrow={1}
+        <Flex align="center" ml="10" mr="7">
+          <Heading as="h1" size="lg" letterSpacing={"tight"}>
+            Snip
+          </Heading>
+        </Flex>
+
+        <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
+          <IconButton
+            aria-label="Hamburger-icon"
+            icon={<HamburgerIcon />}
+            variant="outline"
+          />
+        </Box>
+
+        <Box
+          display={{ base: isOpen ? "block" : "none", md: "block" }}
           mt={{ base: 4, md: 0 }}
+          mr="10"
         >
-          <Text>Docs</Text>
-          <Text>Examples</Text>
-          <Text>Blog</Text>
-        </Stack>
-      </Box>
-    </Flex>
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            display={{ base: isOpen ? "block" : "none", md: "flex" }}
+            width={{ base: "full", md: "auto" }}
+            alignItems="center"
+            flexGrow={1}
+            mt={{ base: 4, md: 0 }}
+          >
+            <Text>Docs</Text>
+            <Text>Examples</Text>
+            <Text>Blog</Text>
+          </Stack>
+        </Box>
+      </Flex>
+    </nav>
   );
 };
 
