@@ -8,12 +8,9 @@ import {
   useDisclosure,
   IconButton,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, SearchIcon } from "@chakra-ui/icons";
 
 const Navigation = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const handleToggle = () => (isOpen ? onClose() : onOpen());
-
   return (
     <nav>
       <Flex
@@ -23,6 +20,7 @@ const Navigation = () => {
         padding={4}
         bg="purple.700"
         color="white"
+        maxH="10rem"
       >
         <Flex align="center" ml="10" mr="7">
           <Heading as="h1" size="lg" letterSpacing={"tight"}>
@@ -30,28 +28,12 @@ const Navigation = () => {
           </Heading>
         </Flex>
 
-        <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
-          <IconButton
-            aria-label="Hamburger-icon"
-            icon={<HamburgerIcon />}
-            variant="outline"
-          />
-        </Box>
-
-        <Box
-          display={{ base: isOpen ? "block" : "none", md: "block" }}
-          mt={{ base: 4, md: 0 }}
-          mr="10"
-        >
-          <Stack
-            direction={{ base: "column", md: "row" }}
-            display={{ base: isOpen ? "block" : "none", md: "flex" }}
-            width={{ base: "full", md: "auto" }}
-            alignItems="center"
-            flexGrow={1}
-            mt={{ base: 4, md: 0 }}
-          >
-            <Text>Add Snippet</Text>
+        <Box mt={{ base: 4, md: 0 }} mr="10">
+          <Stack direction={{ base: "row", md: "row" }} alignItems="center">
+            <Button colorScheme="purple">Add Snippet</Button>
+            <Button colorScheme="purple" leftIcon={<SearchIcon />}>
+              Search
+            </Button>
           </Stack>
         </Box>
       </Flex>
