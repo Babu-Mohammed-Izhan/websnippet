@@ -21,7 +21,7 @@ const Codecard = ({ title, code, language, author }) => {
             {language}
           </Badge>
           <Box
-            color="gray.500"
+            color="gray.300"
             fontWeight="semibold"
             letterSpacing="wide"
             fontSize="xs"
