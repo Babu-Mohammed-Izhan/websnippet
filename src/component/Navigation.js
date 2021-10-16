@@ -51,9 +51,7 @@ const Navigation = () => {
             flexGrow={1}
             mt={{ base: 4, md: 0 }}
           >
-            <Text>Docs</Text>
-            <Text>Examples</Text>
-            <Text>Blog</Text>
+            <Text>Add Snippet</Text>
           </Stack>
         </Box>
       </Flex>

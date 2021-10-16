@@ -7,10 +7,10 @@ import "./App.css";
 function App() {
   return (
     <ChakraProvider>
-      <Box bgColor="purple.800" minH="100vh">
+      <Box bgColor="purple.800">
         <Navigation />
         <Box bgColor="purple.800" minH="100vh">
-          <Box margin="20px">
+          <Box marginLeft="15px" marginRight="15px" marginTop="20px">
             <SimpleGrid columns={[1, 2, 3, 4]} spacing="20px">
               <Codecard
                 language="javascript"
