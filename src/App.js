@@ -9,15 +9,125 @@ function App() {
     <ChakraProvider>
       <Navigation />
       <Box bgColor="purple.800" minH="100vh">
-        <SimpleGrid columns={[2, null, 3, 5]} spacing="40px">
-          <Box>
+        <Box>
+          <SimpleGrid columns={[1, 2, 3, 4]} spacing="20px">
             <Codecard
               language="javascript"
               code="console.log('Hello');"
               author="izhan"
             />
-          </Box>
-        </SimpleGrid>
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+            <Codecard
+              language="javascript"
+              code="console.log('Hello');"
+              author="izhan"
+            />
+          </SimpleGrid>
+        </Box>
       </Box>
     </ChakraProvider>
   );

@@ -5,11 +5,12 @@ import { CopyBlock, dracula } from "react-code-blocks";
 const Codecard = ({ code, language, author }) => {
   return (
     <Box
-      maxW="sm"
+      minW="100%"
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
       bgColor="purple.900"
+      borderColor="green.900"
     >
       <Box p="6">
         <Box display="flex" alignItems="baseline">
