@@ -1,16 +1,7 @@
-import {
-  Box,
-  Stack,
-  Heading,
-  Flex,
-  Text,
-  Button,
-  useDisclosure,
-  IconButton,
-} from "@chakra-ui/react";
-import { HamburgerIcon, SearchIcon } from "@chakra-ui/icons";
+import { Box, Stack, Heading, Flex, Button } from "@chakra-ui/react";
+import { SearchIcon } from "@chakra-ui/icons";
 
-const Navigation = () => {
+const Navigation = ({ handleOpenModal, handleSearch }) => {
   return (
     <nav>
       <Flex
@@ -28,10 +19,16 @@ const Navigation = () => {
           </Heading>
         </Flex>
 
-        <Box mt={{ base: 4, md: 0 }} mr="10">
+        <Box mr="10">
           <Stack direction={{ base: "row", md: "row" }} alignItems="center">
-            <Button colorScheme="purple">Add Snippet</Button>
-            <Button colorScheme="purple" leftIcon={<SearchIcon />}>
+            <Button colorScheme="purple" onClick={handleOpenModal}>
+              Add Snippet
+            </Button>
+            <Button
+              colorScheme="purple"
+              onClick={handleSearch}
+              leftIcon={<SearchIcon />}
+            >
               Search
             </Button>
           </Stack>
