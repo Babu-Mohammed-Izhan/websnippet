@@ -8,7 +8,7 @@ function App() {
   return (
     <ChakraProvider>
       <Navigation />
-      <Box bgColor="gray.900" minH="100vh">
+      <Box bgColor="purple.800" minH="100vh">
         <SimpleGrid columns={[2, null, 3, 5]} spacing="40px">
           <Box>
             <Codecard

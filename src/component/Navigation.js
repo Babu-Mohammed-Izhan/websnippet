@@ -21,7 +21,7 @@ const Navigation = () => {
         justify="space-between"
         wrap="wrap"
         padding={4}
-        bg="purple.600"
+        bg="purple.700"
         color="white"
       >
         <Flex align="center" ml="10" mr="7">

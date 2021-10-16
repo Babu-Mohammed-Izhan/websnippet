@@ -9,7 +9,7 @@ const Codecard = ({ code, language, author }) => {
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
-      bgColor="gray.700"
+      bgColor="purple.900"
     >
       <Box p="6">
         <Box display="flex" alignItems="baseline">
