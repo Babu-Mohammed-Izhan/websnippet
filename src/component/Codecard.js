@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Badge } from "@chakra-ui/react";
+import { Box, Badge, Heading } from "@chakra-ui/react";
 import { CopyBlock, dracula } from "react-code-blocks";
 
-const Codecard = ({ code, language, author }) => {
+const Codecard = ({ title, code, language, author }) => {
   return (
     <Box
       minW="100%"
@@ -13,6 +13,9 @@ const Codecard = ({ code, language, author }) => {
       borderColor="green.900"
     >
       <Box p="6">
+        <Heading fontSize="2xl" color="whiteAlpha.900" paddingBottom="12px">
+          {title.toUpperCase()}
+        </Heading>
         <Box display="flex" alignItems="baseline">
           <Badge borderRadius="full" px="2" colorScheme="yellow">
             {language}

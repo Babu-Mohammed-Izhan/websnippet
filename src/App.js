@@ -15,120 +15,143 @@ function App() {
     <ChakraProvider>
       <Box bgColor="purple.800">
         <Navigation />
-        <Box bgColor="purple.800" minH="100vh">
+        <Box bgColor="purple.800" minH="100vh" padding="30px">
           <Box marginLeft="15px" marginRight="15px" marginTop="20px">
             <SimpleGrid columns={[1, null, 2, 3]} spacing="20px">
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
               />
               <Codecard
+                title="console"
                 language="javascript"
                 code="console.log('Hello');"
                 author="izhan"
