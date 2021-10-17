@@ -3,6 +3,12 @@ import { Box, Badge, Heading } from "@chakra-ui/react";
 import { CopyBlock, dracula } from "react-code-blocks";
 
 const Codecard = ({ title, code, language, author }) => {
+  const languageColor = {
+    python: "blue",
+    javascript: "yellow",
+    c: "blue",
+    "c++": "blue",
+  };
   return (
     <Box
       minW="100%"
@@ -17,7 +23,11 @@ const Codecard = ({ title, code, language, author }) => {
           {title.toUpperCase()}
         </Heading>
         <Box display="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="yellow">
+          <Badge
+            borderRadius="full"
+            px="2"
+            colorScheme={languageColor[language]}
+          >
             {language}
           </Badge>
           <Box

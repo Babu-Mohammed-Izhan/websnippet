@@ -30,9 +30,14 @@ const CodeModal = ({ isOpen, onClose }) => {
       const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, code }),
+        body: JSON.stringify({
+          title: values.title,
+          langauge: values.language.toLowerCase(),
+          author: values.author,
+          code,
+        }),
       };
-      fetch(`${process.env.API_URL}/api/snip`, requestOptions)
+      fetch(`${process.env.PUBLIC_URL}api/snip`, requestOptions)
         .then((res) => res.json())
         .then((data) => console.log(data));
       formik.resetForm();
@@ -42,7 +47,12 @@ const CodeModal = ({ isOpen, onClose }) => {
 
   return (
     <>
-      <Modal isOpen={isOpen} size="xl" onClose={onClose} colorScheme="purple">
+      <Modal
+        isOpen={isOpen}
+        size="xl"
+        onClose={onClose}
+        colorScheme="blackAlpha"
+      >
         <ModalOverlay />
         <ModalContent>
           <ModalHeader size="2xl">Modal Title</ModalHeader>
@@ -80,7 +90,7 @@ const CodeModal = ({ isOpen, onClose }) => {
                 <CodeEditor
                   value={code}
                   language="js"
-                  placeholder="Please enter JS code."
+                  placeholder="Please enter yout code here."
                   onChange={(e) => setCode(e.target.value)}
                   padding={15}
                   style={{

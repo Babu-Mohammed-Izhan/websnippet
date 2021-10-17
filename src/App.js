@@ -28,144 +28,144 @@ function App() {
   const data = [
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
     {
       title: "Console Log",
-      language: "Javascript",
-      code: "console.log('Hello');",
+      language: "javascript",
+      code: `console.log('Hello');`,
       author: "izhan",
     },
   ];
-
+  console.log(process.env);
   return (
     <ChakraProvider>
       <Box bgColor="purple.600">
@@ -177,9 +177,10 @@ function App() {
           <Box marginLeft="15px" marginRight="15px">
             <SimpleGrid columns={[1, null, 2, 3]} spacing="20px">
               {data &&
-                data.map((code) => {
+                data.map((code, idx) => {
                   return (
                     <Codecard
+                      key={idx}
                       title={code.title}
                       language={code.language}
                       code={code.code}
