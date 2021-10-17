@@ -27,6 +27,14 @@ const CodeModal = ({ isOpen, onClose }) => {
     },
     onSubmit: (values) => {
       console.log(values, code);
+      const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...values, code }),
+      };
+      fetch(`${process.env.API_URL}/api/snip`, requestOptions)
+        .then((res) => res.json())
+        .then((data) => console.log(data));
       formik.resetForm();
       setCode("");
     },
@@ -60,7 +68,7 @@ const CodeModal = ({ isOpen, onClose }) => {
               </FormControl>
 
               <FormControl id="author" isRequired>
-                <FormLabel>Author</FormLabel>
+                <FormLabel>Made By:</FormLabel>
                 <Input
                   placeholder="Author"
                   onChange={formik.handleChange}

@@ -11,11 +11,11 @@ import CodeModal from "./component/CodeModal";
 import "./App.css";
 
 function App() {
-  // useEffect(() => {
-  //   axios.get(``, (res) => {
-  //     cosole.log(res.data);
-  //   });
-  // }, []);
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/api/snip`)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
