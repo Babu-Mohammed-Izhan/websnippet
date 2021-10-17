@@ -1,15 +1,25 @@
-import { Box, Stack, Heading, Flex, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Stack,
+  Heading,
+  Flex,
+  Button,
+  useDisclosure,
+  Collapse,
+  Input,
+} from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 
-const Navigation = ({ handleOpenModal, handleSearch }) => {
+const Navigation = ({ handleOpenModal, handleSearch, search }) => {
+  const { isOpen, onToggle } = useDisclosure();
+
   return (
     <nav>
       <Flex
         align="center"
         justify="space-between"
         wrap="wrap"
-        padding={6}
-        paddingTop="10px"
+        padding={["50px 0px 24px 0px", 6, 6, 6]}
         bg="purple.600"
         color="white"
         maxH="10rem"
@@ -27,12 +37,29 @@ const Navigation = ({ handleOpenModal, handleSearch }) => {
             </Button>
             <Button
               colorScheme="purple"
-              onClick={handleSearch}
+              onClick={onToggle}
               leftIcon={<SearchIcon />}
             >
               Search
             </Button>
           </Stack>
+          <Collapse in={isOpen} animateOpacity>
+            <Box
+              color="purple.900"
+              bgColor="whiteAlpha.900"
+              mt="4"
+              rounded="md"
+              shadow="md"
+            >
+              <Input
+                variant="filled"
+                placeholder="Search for the title"
+                pl="20px"
+                value={search}
+                onChange={handleSearch}
+              />
+            </Box>
+          </Collapse>
         </Box>
       </Flex>
     </nav>

@@ -23,7 +23,9 @@ function App() {
     onOpen();
   };
 
-  const openSearchModal = () => {};
+  const handleSearch = (e) => {
+    console.log(e.target.value);
+  };
 
   const data = [
     {
@@ -165,15 +167,14 @@ function App() {
       author: "izhan",
     },
   ];
-  console.log(process.env);
   return (
     <ChakraProvider>
       <Box bgColor="purple.600">
         <Navigation
           handleOpenModal={() => openEnterModal()}
-          handleSearch={() => openSearchModal()}
+          handleSearch={handleSearch}
         />
-        <Box bgColor="purple.600" minH="100vh" padding="30px">
+        <Box bgColor="purple.600" minH="100vh" p="10px 20px 20px 20px">
           <Box marginLeft="15px" marginRight="15px">
             <SimpleGrid columns={[1, null, 2, 3]} spacing="20px">
               {data &&
