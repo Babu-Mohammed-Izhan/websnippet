@@ -9,8 +9,8 @@ const Codecard = ({ title, code, language, author }) => {
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
-      bgColor="purple.900"
-      borderColor="purple.900"
+      bgColor="purple.800"
+      borderColor="purple.800"
     >
       <Box p="6">
         <Heading fontSize="2xl" color="whiteAlpha.900" paddingBottom="12px">
@@ -21,7 +21,7 @@ const Codecard = ({ title, code, language, author }) => {
             {language}
           </Badge>
           <Box
-            color="gray.300"
+            color="purple.100"
             fontWeight="semibold"
             letterSpacing="wide"
             fontSize="xs"

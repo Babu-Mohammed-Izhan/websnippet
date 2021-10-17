@@ -8,7 +8,7 @@ const Navigation = ({ handleOpenModal, handleSearch }) => {
         align="center"
         justify="space-between"
         wrap="wrap"
-        padding={4}
+        padding={6}
         bg="purple.600"
         color="white"
         maxH="10rem"

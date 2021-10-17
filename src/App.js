@@ -25,154 +25,168 @@ function App() {
 
   const openSearchModal = () => {};
 
+  const data = [
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+    {
+      title: "Console Log",
+      language: "Javascript",
+      code: "console.log('Hello');",
+      author: "izhan",
+    },
+  ];
+
   return (
     <ChakraProvider>
-      <Box bgColor="purple.800">
+      <Box bgColor="purple.600">
         <Navigation
           handleOpenModal={() => openEnterModal()}
           handleSearch={() => openSearchModal()}
         />
-        <Box bgColor="purple.800" minH="100vh" padding="30px">
-          <Box marginLeft="15px" marginRight="15px" marginTop="20px">
+        <Box bgColor="purple.600" minH="100vh" padding="30px">
+          <Box marginLeft="15px" marginRight="15px">
             <SimpleGrid columns={[1, null, 2, 3]} spacing="20px">
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
-              <Codecard
-                title="console"
-                language="javascript"
-                code="console.log('Hello');"
-                author="izhan"
-              />
+              {data &&
+                data.map((code) => {
+                  return (
+                    <Codecard
+                      title={code.title}
+                      language={code.language}
+                      code={code.code}
+                      author={code.author}
+                    />
+                  );
+                })}
             </SimpleGrid>
           </Box>
         </Box>
