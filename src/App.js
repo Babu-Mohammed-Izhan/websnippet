@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   ChakraProvider,
@@ -11,22 +11,6 @@ import CodeModal from "./component/CodeModal";
 import "./App.css";
 
 function App() {
-  useEffect(() => {
-    fetch(`${process.env.PUBLIC_URL}/api/snip`)
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
-
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const openEnterModal = () => {
-    onOpen();
-  };
-
-  const handleSearch = (e) => {
-    console.log(e.target.value);
-  };
-
   const data = [
     {
       title: "Console Log",
@@ -167,6 +151,29 @@ function App() {
       author: "izhan",
     },
   ];
+
+  const [filteredData, setfilteredData] = useState([...data]);
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/api/snip`)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const openEnterModal = () => {
+    onOpen();
+  };
+
+  const handleSearch = (e) => {
+    const searchValue = e.target.value;
+    setfilteredData(
+      data.filter((d) =>
+        d.title.toLowerCase().includes(searchValue.toLowerCase())
+      )
+    );
+  };
+
   return (
     <ChakraProvider>
       <Box bgColor="purple.600">
@@ -177,8 +184,8 @@ function App() {
         <Box bgColor="purple.600" minH="100vh" p="10px 20px 20px 20px">
           <Box marginLeft="15px" marginRight="15px">
             <SimpleGrid columns={[1, null, 2, 3]} spacing="20px">
-              {data &&
-                data.map((code, idx) => {
+              {filteredData &&
+                filteredData.map((code, idx) => {
                   return (
                     <Codecard
                       key={idx}
