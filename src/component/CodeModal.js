@@ -16,7 +16,7 @@ import {
 import CodeEditor from "@uiw/react-textarea-code-editor";
 import { useFormik } from "formik";
 
-const CodeModal = ({ isOpen, onClose }) => {
+const CodeModal = ({ isOpen, onClose, data, setData }) => {
   const [code, setCode] = useState("");
 
   const formik = useFormik({
@@ -39,7 +39,7 @@ const CodeModal = ({ isOpen, onClose }) => {
       };
       fetch(`${process.env.PUBLIC_URL}api/snip`, requestOptions)
         .then((res) => res.json())
-        .then((data) => console.log(data));
+        .then((d) => setData([...data, d]));
       formik.resetForm();
       setCode("");
     },

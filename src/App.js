@@ -11,152 +11,152 @@ import CodeModal from "./component/CodeModal";
 import "./App.css";
 
 function App() {
-  const data = [
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-    {
-      title: "Console Log",
-      language: "javascript",
-      code: `console.log('Hello');`,
-      author: "izhan",
-    },
-  ];
-
+  // const data = [
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  //   {
+  //     title: "Console Log",
+  //     language: "javascript",
+  //     code: `console.log('Hello');`,
+  //     author: "izhan",
+  //   },
+  // ];
+  const [data, setdata] = useState([]);
   const [filteredData, setfilteredData] = useState([...data]);
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/api/snip`)
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => setfilteredData(data));
   }, []);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -199,7 +199,12 @@ function App() {
             </SimpleGrid>
           </Box>
         </Box>
-        <CodeModal isOpen={isOpen} onClose={onClose} />
+        <CodeModal
+          isOpen={isOpen}
+          onClose={onClose}
+          data={filteredData}
+          setData={setfilteredData}
+        />
       </Box>
     </ChakraProvider>
   );
