@@ -11,152 +11,15 @@ import CodeModal from "./component/CodeModal";
 import "./App.css";
 
 function App() {
-  // const data = [
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  //   {
-  //     title: "Console Log",
-  //     language: "javascript",
-  //     code: `console.log('Hello');`,
-  //     author: "izhan",
-  //   },
-  // ];
   const [data, setdata] = useState([]);
-  const [filteredData, setfilteredData] = useState([...data]);
+  const [filteredData, setfilteredData] = useState(data);
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/api/snip`)
       .then((res) => res.json())
-      .then((data) => setfilteredData(data));
+      .then((data) => {
+        setdata(data);
+        setfilteredData(data);
+      });
   }, []);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -167,11 +30,11 @@ function App() {
 
   const handleSearch = (e) => {
     const searchValue = e.target.value;
-    setfilteredData(
-      data.filter((d) =>
-        d.title.toLowerCase().includes(searchValue.toLowerCase())
-      )
+    const result = data.filter((d) =>
+      d.title.toLowerCase().includes(searchValue.toLowerCase())
     );
+
+    setfilteredData(result);
   };
 
   return (
