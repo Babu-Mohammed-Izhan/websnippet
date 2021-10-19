@@ -32,7 +32,7 @@ const CodeModal = ({ isOpen, onClose }) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           title: values.title,
-          langauge: values.language.toLowerCase(),
+          language: values.language.toLowerCase(),
           author: values.author,
           code,
         }),
@@ -103,7 +103,7 @@ const CodeModal = ({ isOpen, onClose }) => {
               </FormControl>
               <Button
                 colorScheme="purple"
-                mr={3}
+                mt={6}
                 onClick={onClose}
                 type="submit"
               >
