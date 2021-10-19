@@ -6,8 +6,6 @@ const Codecard = ({ title, code, language, author }) => {
   const languageColor = {
     python: "blue",
     javascript: "yellow",
-    c: "blue",
-    "c++": "blue",
   };
   return (
     <Box
@@ -26,7 +24,7 @@ const Codecard = ({ title, code, language, author }) => {
           <Badge
             borderRadius="full"
             px="2"
-            colorScheme={languageColor[language]}
+            colorScheme={languageColor[language.toLowerCase()]}
           >
             {language}
           </Badge>
