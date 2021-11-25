@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Web Snippet Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Snip is a web snippet application created using React for the Frontend and styles using Chakra UI. The backend of it was created using Express and MongoDB for the database.
 
 ## Available Scripts
 
