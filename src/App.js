@@ -14,7 +14,7 @@ function App() {
   const [data, setdata] = useState([]);
   const [filteredData, setfilteredData] = useState(data);
   useEffect(() => {
-    fetch(`${process.env.API_URL}/api/snip`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/snip`)
       .then((res) => res.json())
       .then((data) => {
         setdata(data);
