@@ -11,7 +11,6 @@ const Codecard = ({ title, code, language, author }) => {
   return (
     <Box
       minW="100%"
-      borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
       bgColor="gray.50"
