@@ -13,24 +13,29 @@ const Codecard = ({ title, code, language, author }) => {
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
-      bgColor="purple.800"
-      borderColor="purple.800"
+      bgColor="gray.50"
+      borderColor="purple.100"
+      shadow="lg"
     >
       <Box p="6">
-        <Heading fontSize="2xl" color="whiteAlpha.900" paddingBottom="12px">
+        <Heading fontSize="2xl" color="purple.500" paddingBottom="12px">
           {title.toUpperCase()}
         </Heading>
-        <Box display="flex" alignItems="baseline">
+        <Box display="flex" alignItems="baseline" paddingBottom="10px">
           <Badge
             borderRadius="full"
             px="2"
-            colorScheme={languageColor[language.toLowerCase()]}
+            colorScheme={
+              languageColor[language.toLowerCase()]
+                ? languageColor[language.toLowerCase()]
+                : "gray"
+            }
           >
             {language}
           </Badge>
           <Box
-            color="purple.100"
-            fontWeight="semibold"
+            color="purple.500"
+            fontWeight="bold"
             letterSpacing="wide"
             fontSize="xs"
             textTransform="uppercase"
