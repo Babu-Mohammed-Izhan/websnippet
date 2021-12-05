@@ -20,19 +20,23 @@ const Navigation = ({ handleOpenModal, handleSearch, search }) => {
         justify="space-between"
         wrap="wrap"
         padding={["50px 0px 24px 0px", 6, 6, 6]}
-        bg="purple.600"
-        color="white"
+        color="purple.600"
         maxH="10rem"
       >
         <Flex align="center" ml="10" mr="7">
-          <Heading as="h1" size="lg" letterSpacing={"tight"}>
+          <Heading as="h1" size="xl" letterSpacing={"tight"}>
             Snip
           </Heading>
         </Flex>
 
         <Box mr="10">
           <Stack direction={{ base: "row", md: "row" }} alignItems="center">
-            <Button colorScheme="purple" onClick={handleOpenModal}>
+            <Button
+              colorScheme="whiteAlpha"
+              color="purple.600"
+              size="lg"
+              onClick={handleOpenModal}
+            >
               Add Snippet
             </Button>
             <Button

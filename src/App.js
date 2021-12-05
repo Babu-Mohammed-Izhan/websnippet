@@ -39,12 +39,12 @@ function App() {
 
   return (
     <ChakraProvider>
-      <Box bgColor="purple.600">
+      <Box>
         <Navigation
           handleOpenModal={() => openEnterModal()}
           handleSearch={handleSearch}
         />
-        <Box bgColor="purple.600" minH="100vh" p="10px 20px 20px 20px">
+        <Box minH="100vh" p="10px 20px 20px 20px">
           <Box marginLeft="15px" marginRight="15px">
             <SimpleGrid columns={[1, null, 2, 3]} spacing="20px">
               {filteredData &&
