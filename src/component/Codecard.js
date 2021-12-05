@@ -14,7 +14,6 @@ const Codecard = ({ title, code, language, author }) => {
       borderRadius="lg"
       overflow="hidden"
       bgColor="gray.50"
-      borderColor="purple.100"
       shadow="lg"
     >
       <Box p="6">
