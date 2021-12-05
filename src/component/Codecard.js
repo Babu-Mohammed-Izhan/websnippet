@@ -1,11 +1,12 @@
 import React from "react";
 import { Box, Badge, Heading } from "@chakra-ui/react";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, shadesOfPurple } from "react-code-blocks";
 
 const Codecard = ({ title, code, language, author }) => {
   const languageColor = {
     python: "blue",
     javascript: "yellow",
+    typescript: "blue",
   };
   return (
     <Box
@@ -43,7 +44,12 @@ const Codecard = ({ title, code, language, author }) => {
             Made by {author}
           </Box>
         </Box>
-        <CopyBlock text={code} language={language} theme={dracula} codeBlock />
+        <CopyBlock
+          text={code}
+          language={language}
+          theme={shadesOfPurple}
+          codeBlock
+        />
       </Box>
     </Box>
   );
