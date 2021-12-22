@@ -6,7 +6,6 @@ import {
   Box,
   Heading,
   Text,
-  Button,
   Image,
   Icon,
   useColorModeValue,
