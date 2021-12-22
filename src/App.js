@@ -111,30 +111,6 @@ function App() {
                 code snippets, use other popular snippets and copy them to your
                 clipboard with a single click. All that is free!
               </Text>
-              <Stack
-                spacing={{ base: 4, sm: 6 }}
-                direction={{ base: "column", sm: "row" }}
-              >
-                <Button
-                  rounded={"full"}
-                  size={"lg"}
-                  fontWeight={"normal"}
-                  px={6}
-                  colorScheme={"purple"}
-                  bg={"purple.500"}
-                  _hover={{ bg: "purple.600" }}
-                >
-                  Get started
-                </Button>
-                <Button
-                  rounded={"full"}
-                  size={"lg"}
-                  fontWeight={"normal"}
-                  px={6}
-                >
-                  How It Works
-                </Button>
-              </Stack>
             </Stack>
             <Flex
               flex={1}

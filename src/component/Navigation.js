@@ -19,18 +19,18 @@ const Navigation = ({ handleOpenModal, handleSearch, search }) => {
         align="center"
         justify="space-between"
         wrap="wrap"
-        padding={["50px 0px 24px 0px", 6, 6, 6]}
+        padding={{ base: "10px 0px", md: "20px 0px 20px 0px" }}
         color="purple.600"
         maxH="10rem"
       >
-        <Flex align="center" ml="10" mr="7">
+        <Flex align="center" ml="5">
           <Heading as="h1" size="xl" letterSpacing={"tight"}>
             Snip
           </Heading>
         </Flex>
 
-        <Box mr="10">
-          <Stack direction={{ base: "row", md: "row" }} alignItems="center">
+        <Box mr={{ base: "5px", md: "1rem" }}>
+          <Stack direction={{ base: "row" }} alignItems="center">
             <Button
               colorScheme="whiteAlpha"
               color="purple.600"
