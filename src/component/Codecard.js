@@ -16,7 +16,7 @@ const Codecard = ({ title, code, language, author }) => {
       bgColor="gray.50"
       shadow="lg"
     >
-      <Box p="6">
+      <Box p={{ base: 1, md: 6 }}>
         <Heading fontSize="2xl" color="purple.500" paddingBottom="12px">
           {title.toUpperCase()}
         </Heading>
