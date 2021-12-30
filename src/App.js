@@ -12,6 +12,7 @@ import {
   ChakraProvider,
   SimpleGrid,
   useDisclosure,
+  Spinner,
 } from "@chakra-ui/react";
 import Navigation from "./component/Navigation";
 import Codecard from "./component/Codecard";
@@ -152,7 +153,8 @@ function App() {
         <Box minH="100vh" p="10px 20px 20px 20px">
           <Box marginLeft="15px" marginRight="15px">
             <SimpleGrid columns={[1, null, 2, 3]} spacing="20px">
-              {filteredData &&
+              {filteredData ? (
+                filteredData &&
                 filteredData.map((code, idx) => {
                   return (
                     <Codecard
@@ -163,7 +165,10 @@ function App() {
                       author={code.author}
                     />
                   );
-                })}
+                })
+              ) : (
+                <Spinner color="purple.500" size="lg" />
+              )}
             </SimpleGrid>
           </Box>
         </Box>
