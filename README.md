@@ -1,5 +1,7 @@
 # Web Snippet Frontend
 
+URL:https://websnip.netlify.app/
+
 Snip is a web snippet application created using React for the Frontend and styles using Chakra UI. The backend of it was created using Express and MongoDB for the database.
 
 ## Available Scripts
