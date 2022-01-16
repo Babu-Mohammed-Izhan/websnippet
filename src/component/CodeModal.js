@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Modal,
   ModalOverlay,
@@ -11,25 +11,25 @@ import {
   FormControl,
   FormLabel,
   Input,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
-import CodeEditor from "@uiw/react-textarea-code-editor";
-import { useFormik } from "formik";
+import CodeEditor from '@uiw/react-textarea-code-editor';
+import { useFormik } from 'formik';
 
 const CodeModal = ({ isOpen, onClose, data, setData }) => {
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState('');
 
   const formik = useFormik({
     initialValues: {
-      title: "",
-      language: "",
-      author: "",
+      title: '',
+      language: '',
+      author: '',
     },
     onSubmit: (values) => {
       console.log(values, code);
       const requestOptions = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           title: values.title,
           language: values.language.toLowerCase(),
@@ -37,11 +37,11 @@ const CodeModal = ({ isOpen, onClose, data, setData }) => {
           code,
         }),
       };
-      fetch(`${process.env.PUBLIC_URL}api/snip`, requestOptions)
+      fetch(`${process.env.REACT_APP_API_URL}api/snip`, requestOptions)
         .then((res) => res.json())
         .then((d) => setData([...data, d]));
       formik.resetForm();
-      setCode("");
+      setCode('');
     },
   });
 
@@ -95,9 +95,9 @@ const CodeModal = ({ isOpen, onClose, data, setData }) => {
                   padding={15}
                   style={{
                     fontSize: 12,
-                    backgroundColor: "#f5f5f5",
+                    backgroundColor: '#f5f5f5',
                     fontFamily:
-                      "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
+                      'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
                   }}
                 />
               </FormControl>

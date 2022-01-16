@@ -7,8 +7,8 @@ import {
   useDisclosure,
   Collapse,
   Input,
-} from "@chakra-ui/react";
-import { SearchIcon } from "@chakra-ui/icons";
+} from '@chakra-ui/react';
+import { SearchIcon } from '@chakra-ui/icons';
 
 const Navigation = ({ handleOpenModal, handleSearch, search }) => {
   const { isOpen, onToggle } = useDisclosure();
@@ -19,18 +19,22 @@ const Navigation = ({ handleOpenModal, handleSearch, search }) => {
         align="center"
         justify="space-between"
         wrap="wrap"
-        padding={{ base: "10px 0px", md: "20px 0px 20px 0px" }}
+        padding={{ base: '10px 0px 0px 0px', md: '10px 20px' }}
         color="purple.600"
         maxH="10rem"
+        position="fixed"
+        w="100%"
+        bg="white"
+        zIndex="2"
       >
         <Flex align="center" ml="5">
-          <Heading as="h1" size="xl" letterSpacing={"tight"}>
+          <Heading as="h1" size="xl" letterSpacing={'tight'}>
             Snip
           </Heading>
         </Flex>
 
-        <Box mr={{ base: "5px", md: "1rem" }}>
-          <Stack direction={{ base: "row" }} alignItems="center">
+        <Box mr={{ base: '5px', md: '1rem' }}>
+          <Stack direction={{ base: 'row' }} alignItems="center">
             <Button
               colorScheme="whiteAlpha"
               color="purple.600"

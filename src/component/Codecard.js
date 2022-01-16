@@ -1,12 +1,12 @@
-import React from "react";
-import { Box, Badge, Heading } from "@chakra-ui/react";
-import { CopyBlock, shadesOfPurple } from "react-code-blocks";
+import React from 'react';
+import { Box, Badge, Heading } from '@chakra-ui/react';
+import { CopyBlock, shadesOfPurple } from 'react-code-blocks';
 
 const Codecard = ({ title, code, language, author }) => {
   const languageColor = {
-    python: "blue",
-    javascript: "yellow",
-    typescript: "blue",
+    python: 'blue',
+    javascript: 'yellow',
+    typescript: 'blue',
   };
   return (
     <Box
@@ -15,6 +15,7 @@ const Codecard = ({ title, code, language, author }) => {
       overflow="hidden"
       bgColor="gray.50"
       shadow="lg"
+      padding={{ base: '16px', md: '0px' }}
     >
       <Box p={{ base: 1, md: 6 }}>
         <Heading fontSize="2xl" color="purple.500" paddingBottom="12px">
@@ -27,7 +28,7 @@ const Codecard = ({ title, code, language, author }) => {
             colorScheme={
               languageColor[language.toLowerCase()]
                 ? languageColor[language.toLowerCase()]
-                : "gray"
+                : 'gray'
             }
           >
             {language}
