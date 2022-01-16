@@ -153,30 +153,28 @@ function App() {
         </Container>
         <Box minH="100vh" p="10px 20px 20px 20px">
           <Box marginLeft="15px" marginRight="15px">
-            <SimpleGrid columns={[1, null, 2, 3]} spacing="20px" column>
-              <ResponsiveMasonry
-                columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-              >
-                <Masonry>
-                  {filteredData ? (
-                    filteredData &&
-                    filteredData.map((code, idx) => {
-                      return (
-                        <Codecard
-                          key={idx}
-                          title={code.title}
-                          language={code.language}
-                          code={code.code}
-                          author={code.author}
-                        />
-                      );
-                    })
-                  ) : (
-                    <Spinner color="purple.500" size="lg" />
-                  )}
-                </Masonry>
-              </ResponsiveMasonry>
-            </SimpleGrid>
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 350: 1, 800: 2, 1000: 3 }}
+            >
+              <Masonry gutter="2rem">
+                {filteredData ? (
+                  filteredData &&
+                  filteredData.map((code, idx) => {
+                    return (
+                      <Codecard
+                        key={idx}
+                        title={code.title}
+                        language={code.language}
+                        code={code.code}
+                        author={code.author}
+                      />
+                    );
+                  })
+                ) : (
+                  <Spinner color="purple.500" size="lg" />
+                )}
+              </Masonry>
+            </ResponsiveMasonry>
           </Box>
         </Box>
         <CodeModal
