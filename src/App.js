@@ -143,8 +143,8 @@ function App() {
                   alt={'Hero Image'}
                   fit={'cover'}
                   align={'center'}
-                  w={'600px'}
-                  h={'300px'}
+                  w="600px"
+                  h="300px"
                   src={
                     'https://res.cloudinary.com/dm8ogh4lv/image/upload/v1644044990/photo-1499951360447-b19be8fe80f5_aopexi.png'
                   }
