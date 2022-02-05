@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import loadable from '@loadable/component';
+import React, { useEffect, useState, Suspense } from 'react';
+import { lazy } from '@loadable/component';
 import {
   Container,
   Stack,
@@ -16,9 +16,9 @@ import {
 } from '@chakra-ui/react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import './App.css';
-const Navigation = loadable(() => import('./component/Navigation'));
-const Codecard = loadable(() => import('./component/Codecard'));
-const CodeModal = loadable(() => import('./component/CodeModal'));
+const Navigation = lazy(() => import('./component/Navigation'));
+const Codecard = lazy(() => import('./component/Codecard'));
+const CodeModal = lazy(() => import('./component/CodeModal'));
 
 export const Blob = (props) => {
   return (
@@ -69,10 +69,12 @@ function App() {
   return (
     <ChakraProvider>
       <Box>
-        <Navigation
-          handleOpenModal={() => openEnterModal()}
-          handleSearch={handleSearch}
-        />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navigation
+            handleOpenModal={() => openEnterModal()}
+            handleSearch={handleSearch}
+          />
+        </Suspense>
         <Container maxW={'7xl'}>
           <Stack
             align={'center'}
@@ -161,13 +163,15 @@ function App() {
                   filteredData &&
                   filteredData.map((code, idx) => {
                     return (
-                      <Codecard
-                        key={idx}
-                        title={code.title}
-                        language={code.language}
-                        code={code.code}
-                        author={code.author}
-                      />
+                      <Suspense fallback={<div>Loading...</div>}>
+                        <Codecard
+                          key={idx}
+                          title={code.title}
+                          language={code.language}
+                          code={code.code}
+                          author={code.author}
+                        />
+                      </Suspense>
                     );
                   })
                 ) : (
@@ -177,12 +181,14 @@ function App() {
             </ResponsiveMasonry>
           </Box>
         </Box>
-        <CodeModal
-          isOpen={isOpen}
-          onClose={onClose}
-          data={filteredData}
-          setData={setfilteredData}
-        />
+        <Suspense fallback={<div>Loading...</div>}>
+          <CodeModal
+            isOpen={isOpen}
+            onClose={onClose}
+            data={filteredData}
+            setData={setfilteredData}
+          />
+        </Suspense>
       </Box>
     </ChakraProvider>
   );
