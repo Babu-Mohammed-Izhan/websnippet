@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import loadable from '@loadable/component';
 import {
   Container,
   Stack,
@@ -10,15 +11,14 @@ import {
   Icon,
   useColorModeValue,
   ChakraProvider,
-  SimpleGrid,
   useDisclosure,
   Spinner,
 } from '@chakra-ui/react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import Navigation from './component/Navigation';
-import Codecard from './component/Codecard';
-import CodeModal from './component/CodeModal';
 import './App.css';
+const Navigation = loadable(() => import('./component/Navigation'));
+const Codecard = loadable(() => import('./component/Codecard'));
+const CodeModal = loadable(() => import('./component/CodeModal'));
 
 export const Blob = (props) => {
   return (
@@ -141,10 +141,10 @@ function App() {
                   alt={'Hero Image'}
                   fit={'cover'}
                   align={'center'}
-                  w={'100%'}
-                  h={'100%'}
+                  w={'600px'}
+                  h={'300px'}
                   src={
-                    'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
+                    'https://res.cloudinary.com/dm8ogh4lv/image/upload/v1644044990/photo-1499951360447-b19be8fe80f5_aopexi.png'
                   }
                 />
               </Box>
