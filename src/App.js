@@ -7,6 +7,7 @@ import {
   Box,
   Heading,
   Text,
+  Image,
   Icon,
   useColorModeValue,
   ChakraProvider,
@@ -138,12 +139,15 @@ function App() {
                 width={'full'}
                 overflow={'hidden'}
               >
-                <img
-                  width="700px"
-                  height="300px"
-                  style={{ 'objectFit': 'cover' }}
-                  src="https://res.cloudinary.com/dm8ogh4lv/image/upload/v1644044990/photo-1499951360447-b19be8fe80f5_aopexi.png"
-                  alt="Hero"
+                <Image
+                  alt={'Hero Image'}
+                  fit={'cover'}
+                  align={'center'}
+                  w="700px"
+                  h="500px"
+                  src={
+                    'https://res.cloudinary.com/dm8ogh4lv/image/upload/v1644044990/photo-1499951360447-b19be8fe80f5_aopexi.png'
+                  }
                 />
               </Box>
             </Flex>
