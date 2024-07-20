@@ -158,8 +158,7 @@ function App() {
               columnsCountBreakPoints={{ 350: 1, 800: 2, 1000: 3 }}
             >
               <Masonry gutter="2rem">
-                {filteredData ? (
-                  filteredData &&
+                {filteredData.length > 0 ? (
                   filteredData.map((code, idx) => {
                     return (
                       <Suspense fallback={<div>Loading...</div>}>
